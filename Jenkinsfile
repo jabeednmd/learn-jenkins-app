@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps{
                 echo 'Test stage'
-                sh 'ls -la C:\Users\jabee\PycharmProjects\learn-jenkins-app\build\index.html'
+                sh 'ls -la "C:\Users\jabee\PycharmProjects\learn-jenkins-app\build\index.html"'
             }
         }
 
