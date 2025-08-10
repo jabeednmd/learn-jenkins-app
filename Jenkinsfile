@@ -9,8 +9,14 @@ pipeline {
         }
         stage('Test') {
             steps{
-                echo 'Test stage'
-                sh 'ls -la "C:\Users\jabee\PycharmProjects\learn-jenkins-app\build\index.html"'
+                sh '''
+                    if [ -f build/index.html ]; then
+                        echo "✅ index.html exists in build directory"
+                    else
+                        echo "❌ index.html not found in build directory"
+                        exit 1
+                    fi
+                '''
             }
         }
 
