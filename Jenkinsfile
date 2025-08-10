@@ -5,7 +5,12 @@ pipeline {
             reuseNode true
         }
     }
+
+    stages {
         stage('Test') {
-            sh 'npm test'
+            steps {
+                sh 'npm test'
+            }
         }
+    }
 }
