@@ -8,5 +8,4 @@ pipeline {
         stage('Test') {
             sh 'npm test'
         }
-    }
 }
